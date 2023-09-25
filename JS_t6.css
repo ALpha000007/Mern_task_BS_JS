@@ -1,0 +1,24 @@
+/* styles.css */
+body {
+    background-color: #fafafa;
+}
+
+.card {
+    margin-top: 50px;
+}
+
+.card-header h3 {
+    text-align: center;
+}
+
+.card-footer p {
+    text-align: center;
+}
+
+.form-check-label {
+    padding-left: 0;
+}
+
+.btn-primary {
+    width: 100%;
+}

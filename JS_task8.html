@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: #f5f5f5;
+      }
+
+      .container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1><center>Registration Form</center></h1>
+      <form id="registrationForm" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="firstName"
+            name="firstName"
+          />
+          <small id="firstNameComment" class="form-text text-muted">POOR</small>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="lastName"
+            name="lastName"
+          />
+          <small id="lastNameComment" class="form-text text-muted">POOR</small>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email" />
+          <small id="emailComment" class="form-text text-muted">POOR</small>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+          />
+          <small id="passwordComment" class="form-text text-muted">POOR</small>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Re-enter Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            name="confirmPassword"
+          />
+          <small id="confirmPasswordComment" class="form-text text-muted"
+            >POOR OR MISMATCH</small
+          >
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="male"
+              name="gender"
+              value="Male"
+            />
+            <label class="form-check-label" for="male">Male</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              id="female"
+              name="gender"
+              value="Female"
+            />
+            <label class="form-check-label" for="female">Female</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" name="age" />
+          <small id="ageComment" class="form-text text-muted">POOR</small>
+        </div>
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phoneNumber"
+            name="phoneNumber"
+          />
+          <small id="phoneNumberComment" class="form-text text-muted"
+            >POOR</small
+          >
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea class="form-control" id="address" name="address"></textarea>
+          <small id="addressComment" class="form-text text-muted">POOR</small>
+        </div>
+        <div class="form-group">
+          <label for="state">State</label>
+          <input type="text" class="form-control" id="state" name="state" />
+          <small id="stateComment" class="form-text text-muted">POOR</small>
+        </div>
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select class="form-control" id="country" name="country">
+            <option value="">Choose your country</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+          </select>
+          <small id="countryComment" class="form-text text-muted">POOR</small>
+        </div>
+        <div class="form-group">
+          <label for="languagesKnown">Languages known</label>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="english"
+              name="languagesKnown[]"
+              value="English"
+            />
+            <label class="form-check-label" for="english">English</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="kannada"
+              name="languagesKnown[]"
+              value="Kannada"
+            />
+            <label class="form-check-label" for="kannada">Kannada</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="hindi"
+              name="languagesKnown[]"
+              value="Hindi"
+            />
+            <label class="form-check-label" for="hindi">Hindi</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="telugu"
+              name="languagesKnown[]"
+              value="Telugu"
+            />
+            <label class="form-check-label" for="telugu">Telugu</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="declare"
+              name="declare"
+            />
+            <label class="form-check-label" for="declare"
+              >Hereby I declare all the given details are true</label
+            >
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">REGISTER</button>
+      </form>
+      <p>Log in to Ethus website</p>
+    </div>
+    <!-- Include Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function validateForm() {
+        resetErrorMessages();
+
+        // Validation flags
+        let isValid = true;
+
+        // Get form input values
+        const firstName = document.getElementById("firstName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const confirmPassword = document
+          .getElementById("confirmPassword")
+          .value.trim();
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const age = document.getElementById("age").value.trim();
+        const phoneNumber = document.getElementById("phoneNumber").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const state = document.getElementById("state").value.trim();
+        const country = document.getElementById("country").value.trim();
+        const languagesKnown = document.querySelectorAll(
+          'input[name="languagesKnown[]"]:checked'
+        ).length;
+        const declare = document.getElementById("declare").checked;
+
+        // Perform validation for each field
+        if (firstName === "") {
+          isValid = false;
+          displayError("firstNameComment", "First Name is required");
+        }
+
+        if (lastName === "") {
+          isValid = false;
+          displayError("lastNameComment", "Last Name is required");
+        }
+
+        if (email === "") {
+          isValid = false;
+          displayError("emailComment", "Email is required");
+        } else if (!isValidEmail(email)) {
+          isValid = false;
+          displayError("emailComment", "A valid email address is required");
+        }
+
+        if (password === "") {
+          isValid = false;
+          displayError("passwordComment", "Password is required");
+        }
+
+        if (confirmPassword === "") {
+          isValid = false;
+          displayError(
+            "confirmPasswordComment",
+            "Re-enter Password is required"
+          );
+        } else if (confirmPassword !== password) {
+          isValid = false;
+          displayError("confirmPasswordComment", "Passwords do not match");
+        }
+
+        if (!gender) {
+          isValid = false;
+          displayError("genderComment", "Gender is required");
+        }
+
+        if (age === "" || isNaN(age)) {
+          isValid = false;
+          displayError("ageComment", "Age is required and must be a number");
+        }
+
+        if (phoneNumber === "") {
+          isValid = false;
+          displayError("phoneNumberComment", "Phone Number is required");
+        }
+
+        if (address === "") {
+          isValid = false;
+          displayError("addressComment", "Address is required");
+        }
+
+        if (state === "") {
+          isValid = false;
+          displayError("stateComment", "State is required");
+        }
+
+        if (country === "") {
+          isValid = false;
+          displayError("countryComment", "Country is required");
+        }
+
+        if (languagesKnown === 0) {
+          isValid = false;
+          displayError(
+            "languagesKnownComment",
+            "At least one language must be known"
+          );
+        }
+
+        if (!declare) {
+          isValid = false;
+          displayError(
+            "declareComment",
+            "You must declare all details are true"
+          );
+        }
+
+        return isValid;
+      }
+
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function displayError(commentId, message) {
+        document.getElementById(commentId).textContent = message;
+      }
+
+      function resetErrorMessages() {
+        const comments = document.querySelectorAll(".form-text.text-muted");
+        for (const comment of comments) {
+          comment.textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>
